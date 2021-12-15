@@ -134,8 +134,7 @@ class UsersController extends Controller
         $validator = Validator::make($request->all(), [
             'name' => 'required',
             'email' => 'required|email:rfc,dns|unique:users,email,'.$request->id,
-            'username' => 'required|unique:users,username,'.$request->id,
-            'password' => 'required',
+            'username' => 'required|unique:users,username,'.$request->id
         ]);
         if ($validator->fails()) { 
             return redirect()->route('users.edit'.'/'.$request->id)
@@ -174,7 +173,6 @@ class UsersController extends Controller
         $user->name = $request->name;
         $user->email = $request->email;
         $user->username = $request->username;
-        $user->password = $request->password;
         $user->image = $imagename;
         $user->save();
 

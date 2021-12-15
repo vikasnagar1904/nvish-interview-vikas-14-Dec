@@ -48,18 +48,6 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="username" class="form-label">Password</label>
-                    <input value="{{ $user->password }}"
-                        type="text" 
-                        class="form-control" 
-                        name="password" 
-                        placeholder="Password" >
-                    @if ($errors->has('password'))
-                        <span class="text-danger text-left">{{ $errors->first('password') }}</span>
-                    @endif
-                </div>
-
-                <div class="mb-3">
                     <div class="form-group">
                         <label for="exampleInputImage">Image:</label>
                         <input type="file" name="profile_image" id="exampleInputImage" class="image" >
