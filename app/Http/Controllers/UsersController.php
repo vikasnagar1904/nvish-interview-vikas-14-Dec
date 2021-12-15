@@ -10,6 +10,7 @@ use App\Http\Requests\UpdateUserRequest;
 use Illuminate\Support\Facades\Hash;
 use Validator;
 use Image;
+use File;
 
 class UsersController extends Controller
 {
